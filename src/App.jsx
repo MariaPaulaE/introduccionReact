@@ -3,11 +3,16 @@ import { ComponenteFlecha, ComponenteClase } from "./tiposcomponentes"; //compon
 
 function App() {
   let numero = 1;
+  let datos = {
+    "nombre" : "Juan Lopez",
+    "profesion" : "Psicologo",
+    "salario":3000000
+  }
   return (
     <>
-    <ComponenteFuncional/>
-    <ComponenteFlecha/>
-    <ComponenteClase/>
+    <ComponenteClase info = {datos}/>
+    <ComponenteFuncional info = {datos} saludo = "hola"/>
+    <ComponenteFlecha info = {datos}/>
       <h1>Hola {nombre()} {numero}</h1>
     </>
   )
